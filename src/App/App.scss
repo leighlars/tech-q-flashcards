@@ -3,4 +3,7 @@
 .App {
   @include generalDisplay();
   flex-direction: column;
+  background: $matteBlue;
+  height: 100vh;
+  overflow-x: hidden;
 }

@@ -1,4 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+$robotoFont : 'Roboto Mono', mono;
+$coral: #c78283;
+$matteBlue: #083248;
+$alabaster: #eeede8;
+
 @mixin generalDisplay() {
   display: flex;
   padding: 1%;
+}
+
+@mixin headerFont($fontSize) {
+  font-family: $robotoFont;
+  color: $coral;
+  text-shadow: 2px 1px black;
+  font-size: $fontSize;
+  margin: 0;
+}
+
+@mixin button() {
+  border-radius: 6px;
+  border: none;
+  background: $coral;
+  box-shadow: 1px 1px 3px black;
+  @include headerFont(1em);
+  color: $alabaster;
+  padding: 1%;
+  width: 3em;
+  &:hover {
+    background: $alabaster;
+    color: $matteBlue;
+    text-shadow: none;
+  }
+
 }
