@@ -9,12 +9,12 @@ form{
     border: none;
     color: $coral;
     border-bottom: 1px solid $coral;
+    margin-right: 10px;
     ::placeholder {
       @include headerFont(1em);
     }
   }
   button {
     @include button();
-    margin-left: 5px;
   }
  }

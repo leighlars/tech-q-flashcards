@@ -2,6 +2,7 @@
 
 header {
   @include generalDisplay();
+  padding: 0;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -11,7 +12,8 @@ header {
   nav {
     @include generalDisplay();
     justify-content: space-evenly;
-    width: 23em;
+    width: 25em;
+    margin: 0 auto;
     button {
       @include button();
     }

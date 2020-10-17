@@ -16,17 +16,17 @@ export const Main: React.FC<MainProps> = props => {
   }, [])
 
   const getRandomQuestion = () => {
-    const randomIndex = Math.round(Math.random() * props.endQuestions.length)
-    const randomQuestion = props.endQuestions[randomIndex]
-    setQuestion(randomQuestion)
-    props.addUserQuestion(randomQuestion)
+    if (props.endQuestions.length > 0) {
+      const randomIndex = Math.round(Math.random() * props.endQuestions.length)
+      const randomQuestion = props.endQuestions[randomIndex]
+      setQuestion(randomQuestion)
+      props.addUserQuestion(randomQuestion)
+    }
   }
   
   return(
     <div>
-      {props.endQuestions.length > 0 &&
-        <Question question={question} getRandomQuestion={getRandomQuestion} user={props.user}/>  
-      } 
+      <Question question={question} getRandomQuestion={getRandomQuestion} user={props.user}/>  
       {props.user.name &&
         <UserInfo user={props.user}/>
       }

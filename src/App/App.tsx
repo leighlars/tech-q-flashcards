@@ -6,10 +6,11 @@ import {Main} from '../Main/Main'
 import {Form} from '../Form/Form'
 
 
-const App: React.FC = props => {
+const App: React.FC = () => {
   const [techQuestions, setAllQuestions] = useState(questions)
   const [endQuestions, setEndQuestions] = useState<Array<string>>([])
   const [user, setUser] = useState({name: '', questions: ['']})
+
 
   const shuffleQuestions = (questions: Array<string>) => {
     for (var i = questions.length - 1; i > 0; i--) {
