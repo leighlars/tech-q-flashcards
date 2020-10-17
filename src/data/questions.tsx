@@ -1,6 +1,6 @@
 export const questions = {
   be: [
-    ",What is the difference between Array#map and Array#each?",
+    "What is the difference between Array#map and Array#each?",
     "Name 4 ruby enumerables excluding each and map and give a brief example of what’s unique about each.",
     "In as much detail as possible, describe the request-response cycle.",
     "What’s a module in Ruby?", 

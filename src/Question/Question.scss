@@ -1,12 +1,22 @@
 @import '../styles/variables';
 
 .question-card {
+  @include generalDisplay();
+  flex-direction: column;
+  justify-content: center;
   background: $coral;
-  width: 10em;
+  width: 20em;
+  border: $matteBlue;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px black;
+  margin: 0 auto;
   h2 {
-    @include headerFont(1.5em)
+    @include headerFont(1.5em);
+    color: $alabaster;
   }
   button {
     @include button();
+    margin: 1em auto;
+    width: 10em;
   }
 }

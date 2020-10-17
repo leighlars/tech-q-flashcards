@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './Main.scss'
 import {Question} from '../Question/Question'
+import { questions } from '../data/questions'
 
 
 interface MainProps {
@@ -8,16 +9,22 @@ interface MainProps {
 }
 
 export const Main: React.FC<MainProps> = props => {
-  const [question, setQuestion] = useState('')
+  const [randomQuestion, setRandomQuestion] = useState('')
 
   const getRandomQuestion = () => {
     const randomIndex = Math.round(Math.random() * props.endQuestions.length)
-    const randomQuestion = props.endQuestions[randomIndex]
-    return (<Question question={randomQuestion}/>)
+    const question = props.endQuestions[randomIndex]
+    setRandomQuestion(question)
+  }
+
+  const nextQuestion = () => {
+    getRandomQuestion()
   }
 
   return(
-    {getRandomQuestion}
+    <div>
+      <Question question={randomQuestion} nextQuestion={nextQuestion} />
+    </div>
   )
 
 }

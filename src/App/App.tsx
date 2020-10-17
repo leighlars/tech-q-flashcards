@@ -1,50 +1,37 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './App.scss'
 import {Header} from '../Header/Header'
 import {questions} from '../data/questions'
 import {Main} from '../Main/Main'
 
 const App: React.FC = () => {
-  const [techQuestions, setAllQuestions] = useState({be: [''], fe: ['']})
-  const [endQuestions, setEndQuestions] = useState([''])
+  const [techQuestions, setAllQuestions] = useState(questions)
+  const [endQuestions, setEndQuestions] = useState<Array<string>>([])
 
-  useEffect(() => {
-    setAllQuestions(questions)
-  }, [])
 
-  const shuffleQuestions = (questions: array) => {
+  const shuffleQuestions = (questions: Array<string>) => {
     for (var i = questions.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = questions[i];
-        questions[i] = questions[j];
-        questions[j] = temp;
+        var j = Math.floor(Math.random() * (i + 1))
+        var temp = questions[i]
+        questions[i] = questions[j]
+        questions[j] = temp
     }
+    return questions
   }
 
   const organizeQuestions = (type:string) => {
-    if (type === 'all') { 
-      const allQs = techQuestions.be.concat(techQuestions.fe)
-       for (var i = allQs.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = allQs[i];
-        allQs[i] = allQs[j];
-        allQs[j] = temp;
-    }
-      setEndQuestions(allQs)
-    } else {
-      const endQuestions = techQuestions[type]
-      shuffleQuestions(endQuestions)
-      setEndQuestions(endQuestions)
-    }
+    const allQs = [...techQuestions.be, ...techQuestions.fe]
+    // @ts-ignore
+    const typeQuestions = techQuestions[type]
+    const shuffledQuestions = type === 'all' ? shuffleQuestions(allQs) : shuffleQuestions(typeQuestions)
+    setEndQuestions(shuffledQuestions)
   }
-
   
 
   return (
     <div className="App">
-      <Header organizeQuestions={organizeQuestions}
-      />
-        {/* <Main endQuestions={endQuestions} /> */}
+      <Header organizeQuestions={organizeQuestions}/>
+      <Main endQuestions={endQuestions} />
     </div>
   );
 }
