@@ -8,7 +8,8 @@ form {
     color: $alabaster;
     @include headerFont(1em);
   }
-  span {
-    @include headerFont(1em);
-  }
+}
+
+.comment-text {
+  @include headerFont(1em);
 }

@@ -6,21 +6,21 @@ interface FormProps {
 }
 
 export const Form: React.FC<FormProps> = props => {
-  const [user, setUser] = useState<string>('')
+  const [userName, setUser] = useState<string>('')
 
   const clickHandler = (e: React.MouseEvent, user: string)  => {
     e.preventDefault()
-    props.addUser(user)
+    props.addUser(userName)
   }
 
   return (
     <form>
       <input 
-        value={user}
+        value={userName}
         onChange={(e) => setUser(e.target.value)}
         placeholder='Candidate name'
       />
-      <button onClick={(e) => {clickHandler(e, user)}}>Go!</button>
+      <button onClick={(e) => {clickHandler(e, userName)}}>Go!</button>
     </form>
   )
 }

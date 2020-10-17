@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './UserInfo.scss'
 import {UserComment} from './UserComment'
 
@@ -16,7 +16,7 @@ export const UserInfo: React.FC<UserInfoProps> = props => {
     <section className='user-card'>
       <h2>{props.user.name}'s Questions</h2>
       {userQuestions}
-      <UserComment />
+      <UserComment/>
     </section>
   )
 

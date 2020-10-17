@@ -24,7 +24,7 @@ export const Main: React.FC<MainProps> = props => {
   
   return(
     <div>
-      {props.endQuestions.length > 0 && question !== '' &&
+      {props.endQuestions.length > 0 &&
         <Question question={question} getRandomQuestion={getRandomQuestion} user={props.user}/>  
       } 
       {props.user.name &&

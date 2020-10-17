@@ -5,7 +5,8 @@ import {questions} from '../data/questions'
 import {Main} from '../Main/Main'
 import {Form} from '../Form/Form'
 
-const App: React.FC = () => {
+
+const App: React.FC = props => {
   const [techQuestions, setAllQuestions] = useState(questions)
   const [endQuestions, setEndQuestions] = useState<Array<string>>([])
   const [user, setUser] = useState({name: '', questions: ['']})
@@ -39,7 +40,6 @@ const App: React.FC = () => {
       setUser({name: '', questions: []})
     }
   }
-
 
   return (
     <div className="App">

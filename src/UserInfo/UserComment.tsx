@@ -2,22 +2,27 @@ import React, {useState} from 'react'
 import './UserComment.scss'
 
 export const UserComment: React.FC = () => {
-  const [comments, setComments] = useState<string>('')
-  const [formShow, setFormShow] = useState<boolean>(true)
+  const [comment, setComment] = useState<string>('')
+  const [formDisplay, setFormDisplay] = useState<boolean>(true)
 
   const hideForm = (e: React.MouseEvent) => {
     e.preventDefault()
-    setFormShow(!formShow)
+    setFormDisplay(false)
   }
 
-  return(
+  const jsxForm = (
     <form>
       <textarea
         placeholder= "Candidate notes"
-        value={comments}
-        onChange={(e) => setComments(e.target.value)}
+        value={comment}
+        onChange={(e) => setComment(e.target.value)}
       />
       <button onClick={(e) => {hideForm(e)}}>Add</button>
-    </form>
+    </form>)
+
+  return(
+    <>
+    {formDisplay === true ? jsxForm : <p className='comment-text'>{comment}</p> } 
+    </>
   )
 }
