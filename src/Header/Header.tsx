@@ -5,11 +5,10 @@ interface HeaderProps {
   organizeQuestions: Function
 }
 
-
 export const Header: React.FC<HeaderProps> = props => {
 
-  const clickHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    const endType = e.target.name
+  const clickHandler = (type: string) => {
+    const endType = type
     props.organizeQuestions(endType)
   } 
 
@@ -18,9 +17,9 @@ export const Header: React.FC<HeaderProps> = props => {
     <header>
       <h1>Tech Interview Questions</h1>
       <nav>
-        <button name='fe' onClick={(e) => clickHandler(e)}>FE</button>
-        <button name='be' onClick={(e) => clickHandler(e)}>BE</button>
-        <button name='all' onClick={(e) => clickHandler(e)}>All</button>
+        <button onClick={(e) => clickHandler('fe')}>FE</button>
+        <button onClick={(e) => clickHandler('be')}>BE</button>
+        <button onClick={(e) => clickHandler('all')}>All</button>
       </nav>
     </header>
   )

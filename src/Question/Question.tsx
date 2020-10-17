@@ -6,9 +6,10 @@ interface QuestionProps {
 }
 
 export const Question: React.FC<QuestionProps> = props => {
+  
   return(
     <div className='question-card'>
-      <h2>{props}</h2>
+      <h2>props.question</h2>
       <button>Next Question</button>
     </div>
   )
