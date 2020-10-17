@@ -3,16 +3,14 @@ import './Question.scss'
 
 interface QuestionProps {
   question: string
-  nextQuestion: Function
+  getRandomQuestion: Function
 }
 
 export const Question: React.FC<QuestionProps> = props => {
-  
-
   return(
     <div className='question-card'>
       <h2>{props.question}</h2>
-      <button onClick={props.nextQuestion}>Next Question</button>
+      <button onClick={() => {props.getRandomQuestion()}}>Next Question</button>
     </div>
   )
 }

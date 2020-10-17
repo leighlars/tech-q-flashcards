@@ -1,29 +1,32 @@
-import React, {useState} from 'react'
-import './Main.scss'
+import React, {useEffect, useState} from 'react'
 import {Question} from '../Question/Question'
-import { questions } from '../data/questions'
+import {UserInfo} from '../UserInfo/UserInfo'
 
 
 interface MainProps {
   endQuestions: string[]
+  user: {name: string, questions: string[]}
 }
 
 export const Main: React.FC<MainProps> = props => {
-  const [randomQuestion, setRandomQuestion] = useState('')
+  const [question, setQuestion] = useState<string>('')
+
+  useEffect(() => {
+    getRandomQuestion()
+  }, [])
 
   const getRandomQuestion = () => {
     const randomIndex = Math.round(Math.random() * props.endQuestions.length)
-    const question = props.endQuestions[randomIndex]
-    setRandomQuestion(question)
+    const randomQuestion = props.endQuestions[randomIndex]
+    setQuestion(randomQuestion)
   }
-
-  const nextQuestion = () => {
-    getRandomQuestion()
-  }
-
+  
   return(
     <div>
-      <Question question={randomQuestion} nextQuestion={nextQuestion} />
+      <UserInfo user={props.user}/>
+      {props.endQuestions.length > 0 &&
+        <Question question={question} getRandomQuestion={getRandomQuestion} />  
+      } 
     </div>
   )
 

@@ -1,0 +1,19 @@
+@import '../styles/variables';
+
+form{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  input {
+    @include headerFont(1em);
+    background: transparent;
+    border: none;
+    color: $coral;
+    border-bottom: 1px solid $coral;
+    ::placeholder {
+      @include headerFont(1em);
+    }
+  }
+  button {
+    @include button();
+  }
+ }
