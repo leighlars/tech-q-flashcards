@@ -1,44 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tech Qs
 
-## Available Scripts
+### Abstract
+Tech Qs is a flashcard game to be played via teleconferencing calls to practice mock interview questions. One person is an interviewer, while another is the candidate. Other party members can private message / chat the interviewer with candidate comments, as to not distract the candidate. There are 70 FE questions and 30 BE questions, and an option to play full-stack. One round is 5 questions. Once round is completed, interviewer adds notes in the textbox, adds to candidate card. The interviewer can discuss the comments with the candidate and other party members. Then, the user can screen shot and send candidate card to candidate for further private review. The game ends, and a new user can be added. 
 
-In the project directory, you can run:
+### Tech stack
+- Typescript
+- Hooks
+- SCSS
 
-### `npm start`
+### Setup
+- Fork and clone the repo into your local computer
+- CD into folder and run `npm i` to install dependencies
+- Run  `npm start` to interact with game on local server
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Showcase
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Wins / Challenges
+This was my first solo Typescript application, and I'm proud of it. In the future, I would build a Node server and possibly opportunities for players to all play on the same site instead of screen share. I would like to also email the the candidate the feedback card instead of having interviewer screenshot and send via Slack.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
