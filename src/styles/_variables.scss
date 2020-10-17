@@ -23,10 +23,10 @@ $alabaster: #eeede8;
   border: none;
   background: $coral;
   box-shadow: 1px 1px 3px black;
-  @include headerFont(1em);
+  @include headerFont(1.25em);
   color: $alabaster;
-  padding: 1%;
-  width: 3em;
+  padding: 2%;
+  min-width: 3em;
   &:hover {
     background: $alabaster;
     color: $matteBlue;

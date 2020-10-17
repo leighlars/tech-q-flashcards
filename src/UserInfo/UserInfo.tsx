@@ -1,16 +1,23 @@
-import userEvent from '@testing-library/user-event'
 import React from 'react'
 import './UserInfo.scss'
+import {UserComment} from './UserComment'
 
 interface UserInfoProps {
   user: {name:string, questions: string[]}
 }
 
 export const UserInfo: React.FC<UserInfoProps> = props => {
+
+  const userQuestions = props.user.questions.map(question => {
+    return <p className='user-question'>- {question}</p>
+  })
+
   return(
-    <div>
-      <h2>{props.user.name}</h2>
-    </div>
+    <section className='user-card'>
+      <h2>{props.user.name}'s Questions</h2>
+      {userQuestions}
+      <UserComment />
+    </section>
   )
 
 }

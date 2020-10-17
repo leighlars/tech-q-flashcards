@@ -5,11 +5,13 @@ header {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  @include headerFont(2vw);
+  h1 {
+    @include headerFont(3em);
+  }
   nav {
     @include generalDisplay();
     justify-content: space-evenly;
-    width: 20em;
+    width: 23em;
     button {
       @include button();
     }

@@ -1,0 +1,47 @@
+@import '../styles/variables';
+
+.gameplay-modal {
+  @include generalDisplay();
+  flex-direction: column;
+  padding: 2%;
+  background: $alabaster;
+  color: $matteBlue;
+  z-index: 1000;
+  position: fixed;
+  right: 20%;
+  top: 15%;
+  width: 60%;
+
+  button {
+    width: 1.5em;
+    padding: 0;
+    margin-left: 800px;
+    &:hover {
+      background: $matteBlue;
+      color: $coral;
+    }
+  }
+
+  h2 {
+    @include headerFont(2em);
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    @include headerFont(1em);
+  }
+  
+  h3 {
+    @include headerFont(1.5em);
+    margin: 0 auto;
+  }
+
+  h2, h3 ,p {
+    color: $matteBlue;
+    text-shadow: none;
+  }
+}
+  .hidden {
+    display: none;
+  }

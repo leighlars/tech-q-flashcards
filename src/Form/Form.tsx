@@ -18,7 +18,7 @@ export const Form: React.FC<FormProps> = props => {
       <input 
         value={user}
         onChange={(e) => setUser(e.target.value)}
-        placeholder='Your name'
+        placeholder='Candidate name'
       />
       <button onClick={(e) => {clickHandler(e, user)}}>Go!</button>
     </form>

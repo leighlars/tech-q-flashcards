@@ -1,1 +1,18 @@
 @import '../styles/variables';
+
+.user-card {
+  @include generalDisplay();
+  flex-direction: column;
+  background: $matteBlue;
+  border: 1px solid $coral;
+  border-radius: 6px;
+  box-shadow: 1px 1px black;
+  margin: 20px auto;
+  width: 60vh;
+  h2 {
+    @include headerFont(1.5em);
+  }
+  p {
+    @include headerFont(1em);
+  }
+}

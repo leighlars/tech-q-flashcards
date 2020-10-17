@@ -32,12 +32,20 @@ const App: React.FC = () => {
     setUser({name, questions: []})
   }
 
+  const addUserQuestion = (question: string) => {
+    const userQuestions = [...user.questions, question]
+    setUser({...user, questions: userQuestions })
+    if (user.questions.length > 4) {
+      setUser({name: '', questions: []})
+    }
+  }
+
 
   return (
     <div className="App">
       <Header organizeQuestions={organizeQuestions}/>
       {user.name === '' && <Form addUser={addUser}/>}
-      <Main endQuestions={endQuestions} user={user}/>
+      <Main endQuestions={endQuestions} user={user} addUserQuestion={addUserQuestion}/>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+@import '../styles/variables';
+
+form {
+  @include generalDisplay();
+  align-items: center;
+  input {
+    background: $coral;
+    color: $alabaster;
+    @include headerFont(1em);
+  }
+  span {
+    @include headerFont(1em);
+  }
+}
