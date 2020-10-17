@@ -18,6 +18,7 @@ export const Gameplay: React.FC<GameplayProps> = props => {
       <p>- Practice alone or play with friends via video conferencing</p>
       <p>- Best if played with friends for optimal interview feedback</p>
       <p>- Enter candidate's name to keep track of questions asked</p>
+      <p>- Candidate should minimize screen to prevent looking at questions (mock realistic interview)</p>
       <p>- One person is interviewer, one person is candidate</p>
       <p>- Other players may privately message interviewer their thoughts on candidate to write in comment box and not distract candidate</p>
       <p>- Each round has 5 questions</p>
