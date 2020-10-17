@@ -1,5 +1,7 @@
 # Tech Qs
 
+[Leigh Larson](https://github.com/leighlars)
+
 ### Abstract
 Tech Qs is a flashcard game to be played via teleconferencing calls to practice mock interview questions. One person is an interviewer, while another is the candidate. Other party members can private message / chat the interviewer with candidate comments, as to not distract the candidate. There are 70 FE questions and 30 BE questions, and an option to play full-stack. One round is 5 questions. Once round is completed, interviewer adds notes in the textbox, adds to candidate card. The interviewer can discuss the comments with the candidate and other party members. Then, the user can screen shot and send candidate card to candidate for further private review. The game ends, and a new user can be added. 
 
